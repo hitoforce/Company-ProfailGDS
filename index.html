@@ -96,30 +96,118 @@
       </div>
     </nav>
 
-    <div class="md:hidden mobile-bottom-nav">
-      <a href="#home" class="nav-item active"><i class="fas fa-home"></i></a>
-      <a href="#about" class="nav-item"><i class="fas fa-info-circle"></i></a>
-      <a href="#sejarah" class="nav-item"><i class="fas fa-history"></i></a>
-      <a href="#struktur-organisasi" class="nav-item"
-        ><i class="fas fa-users"></i
-      ></a>
-      <a href="#daftar" class="nav-item text-red-500"
-        ><i class="fas fa-user-plus"></i
-      ></a>
+    <div
+      class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[92%] max-w-[420px] z-[999]"
+    >
+      <div
+        class="relative bg-slate-900/80 backdrop-blur-xl border border-white/10 rounded-[2.5rem] p-2 shadow-2xl flex justify-around items-center"
+      >
+        <div
+          id="nav-indicator"
+          class="absolute h-12 w-12 bg-red-600/20 border border-red-600/30 rounded-2xl transition-all duration-500 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)]"
+        ></div>
+
+        <a
+          href="#home"
+          class="mobile-nav-item active relative z-10 p-4 text-gray-500 transition-all duration-300"
+          onclick="handleNav(this)"
+        >
+          <i class="fas fa-home text-xl"></i>
+        </a>
+
+        <a
+          href="#about"
+          class="mobile-nav-item relative z-10 p-4 text-gray-500 transition-all duration-300"
+          onclick="handleNav(this)"
+        >
+          <i class="fas fa-info-circle text-xl"></i>
+        </a>
+
+        <a
+          href="#sejarah"
+          class="mobile-nav-item relative z-10 p-4 text-gray-500 transition-all duration-300"
+          onclick="handleNav(this)"
+        >
+          <i class="fas fa-history text-xl"></i>
+        </a>
+
+        <a
+          href="#struktur-organisasi"
+          class="mobile-nav-item relative z-10 p-4 text-gray-500 transition-all duration-300"
+          onclick="handleNav(this)"
+        >
+          <i class="fas fa-users text-xl"></i>
+        </a>
+
+        <a
+          href="#daftar"
+          class="mobile-nav-item relative z-10 p-4 transition-all duration-300"
+          onclick="handleNav(this)"
+        >
+          <div
+            class="w-10 h-10 bg-red-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-red-600/40 transform active:scale-90 transition-transform"
+          >
+            <i class="fas fa-user-plus text-sm"></i>
+          </div>
+        </a>
+      </div>
     </div>
 
-    <div class="md:hidden mobile-bottom-nav">
-      <a href="#home" class="text-white text-xl"><i class="fas fa-home"></i></a>
-      <a href="#about" class="text-white/50 text-xl"
-        ><i class="fas fa-info-circle"></i
-      ></a>
-      <a href="#sejarah" class="text-white/50 text-xl"
-        ><i class="fas fa-history"></i
-      ></a>
-      <a href="#daftar" class="text-red-600 text-xl"
-        ><i class="fas fa-user-plus"></i
-      ></a>
-    </div>
+    <style>
+      /* Style untuk item yang aktif */
+      .mobile-nav-item.active {
+        color: #ef4444 !important; /* Warna Red-500 */
+        transform: translateY(-5px);
+      }
+
+      /* Animasi icon saat ditekan */
+      .mobile-nav-item:active i {
+        transform: scale(0.7);
+      }
+
+      /* Memastikan indicator berada di posisi yang benar */
+      #nav-indicator {
+        left: 0;
+        pointer-events: none;
+      }
+    </style>
+
+    <script>
+      function handleNav(element) {
+        const items = document.querySelectorAll(".mobile-nav-item");
+        const indicator = document.getElementById("nav-indicator");
+
+        // Reset semua item
+        items.forEach((item) => {
+          item.classList.remove("active");
+          item.classList.add("text-gray-500");
+        });
+
+        // Set item yang diklik menjadi aktif
+        element.classList.add("active");
+        element.classList.remove("text-gray-500");
+
+        // Pindahkan indikator merah secara otomatis
+        const rect = element.getBoundingClientRect();
+        const parentRect = element.parentElement.getBoundingClientRect();
+
+        // Hitung posisi horizontal
+        const positionX = element.offsetLeft;
+        const elementWidth = element.offsetWidth;
+
+        indicator.style.width = `${elementWidth}px`;
+        indicator.style.left = `${positionX}px`;
+      }
+
+      // Jalankan saat halaman pertama kali dibuka
+      window.addEventListener("DOMContentLoaded", () => {
+        const activeItem = document.querySelector(".mobile-nav-item.active");
+        if (activeItem) {
+          // Beri sedikit delay agar kalkulasi bounding box akurat
+          setTimeout(() => handleNav(activeItem), 100);
+        }
+      });
+    </script>
 
     <section
       id="home"
