@@ -1,0 +1,1433 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gardasi | Official</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      /* Navbar Desktop Customization */
+      .nav-link {
+        position: relative;
+        transition: all 0.3s ease;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #dc2626; /* red-600 */
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      /* Glassmorphism Effect saat Scroll */
+      .nav-scrolled {
+        background: rgba(255, 255, 255, 0.7) !important;
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 15px 0 !important;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      }
+      .nav-scrolled .logo-text {
+        color: #111 !important;
+      }
+      .nav-scrolled .nav-link {
+        color: #333 !important;
+      }
+
+      /* Mobile Bottom Nav Active State */
+      .mobile-bottom-nav a.active {
+        color: #dc2626;
+        transform: translateY(-5px);
+        transition: all 0.3s ease;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-slate-900 overflow-x-hidden">
+    <nav
+      id="navbar"
+      class="hidden md:flex fixed top-0 left-0 w-full z-50 py-8 transition-all duration-500 px-10 lg:px-20"
+    >
+      <div class="flex justify-between items-center max-w-7xl mx-auto w-full">
+        <div
+          class="logo-text text-2xl font-black tracking-tighter text-white transition-colors duration-300"
+        >
+          GDS <span class="text-red-600">.</span> CORE
+        </div>
+
+        <div
+          class="flex items-center gap-10 text-[11px] font-black uppercase tracking-[0.2em] text-white"
+        >
+          <!-- <a href="#home" class="nav-link">Beranda</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#sejarah" class="nav-link">Sejarah</a>
+          <a href="#struktur-organisasi" class="nav-link">Aerguruan</a>
+          <a href="#prestasi" class="nav-link">Prestasi</a>
+          <a href="#kolaborasi" class="nav-link">Kolad</a>
+          <a href="#aktivitas" class="nav-link">Galeri</a>
+          <a href="#informasi" class="nav-link">Informasi</a> -->
+          <a
+            href="#daftar"
+            class="ml-4 bg-red-700 hover:bg-red-800 text-white px-8 py-3 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-red-900/20"
+          >
+            Gabung
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="md:hidden mobile-bottom-nav">
+      <a href="#home" class="nav-item active"><i class="fas fa-home"></i></a>
+      <a href="#about" class="nav-item"><i class="fas fa-info-circle"></i></a>
+      <a href="#sejarah" class="nav-item"><i class="fas fa-history"></i></a>
+      <a href="#struktur-organisasi" class="nav-item"
+        ><i class="fas fa-users"></i
+      ></a>
+      <a href="#daftar" class="nav-item text-red-500"
+        ><i class="fas fa-user-plus"></i
+      ></a>
+    </div>
+
+    <div class="md:hidden mobile-bottom-nav">
+      <a href="#home" class="text-white text-xl"><i class="fas fa-home"></i></a>
+      <a href="#about" class="text-white/50 text-xl"
+        ><i class="fas fa-info-circle"></i
+      ></a>
+      <a href="#sejarah" class="text-white/50 text-xl"
+        ><i class="fas fa-history"></i
+      ></a>
+      <a href="#daftar" class="text-red-600 text-xl"
+        ><i class="fas fa-user-plus"></i
+      ></a>
+    </div>
+
+    <section
+      id="home"
+      class="relative h-screen w-full flex items-center justify-center bg-black overflow-hidden"
+    >
+      <div class="absolute inset-0 opacity-50">
+        <img src="./img/begroon.JPG" class="w-full h-full object-cover" />
+      </div>
+      <div class="relative z-10 text-center px-6">
+        <h1
+          class="text-6xl md:text-[120px] font-black text-white tracking-tighter uppercase leading-none"
+        >
+          JIWA
+          <span class="text-transparent" style="-webkit-text-stroke: 1px white"
+            >SATRIA</span
+          >
+        </h1>
+        <p
+          class="text-gray-400 text-sm md:text-lg mt-6 max-w-lg mx-auto font-light"
+        >
+          Membangun karakter dan fisik melalui tradisi beladiri nusantara yang
+          murni.
+        </p>
+      </div>
+    </section>
+
+    <section id="sejarah" class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex items-center gap-3 mb-10">
+          <span class="text-red-700 font-black">|</span>
+          <h2
+            class="text-xs font-black uppercase tracking-widest text-gray-400"
+          >
+            Arsip Sejarah
+          </h2>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-8 items-center">
+          <div class="hidden md:flex flex-col gap-4">
+            <button
+              onclick="prevHistory()"
+              class="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center hover:bg-red-700 hover:text-white transition"
+            >
+              <i class="fas fa-chevron-up"></i>
+            </button>
+            <div class="h-20 w-[1px] bg-slate-200 mx-auto"></div>
+            <button
+              onclick="nextHistory()"
+              class="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center hover:bg-red-700 hover:text-white transition"
+            >
+              <i class="fas fa-chevron-down"></i>
+            </button>
+          </div>
+
+          <div class="flex-1 w-full">
+            <div
+              class="relative overflow-hidden rounded-2xl aspect-[21/9] shadow-2xl bg-slate-100"
+            >
+              <img
+                id="hist-img"
+                src="./img/sejarah.JPG"
+                class="w-full h-full object-cover transition-all duration-700"
+              />
+
+              <div
+                class="absolute bottom-6 left-6 bg-red-700 text-white px-6 py-2 rounded-lg font-black text-2xl shadow-xl"
+              >
+                <span id="hist-year">1985</span>
+              </div>
+            </div>
+
+            <div class="mt-8 max-w-2xl">
+              <h3
+                id="hist-title"
+                class="text-3xl font-black uppercase mb-4 tracking-tighter"
+              >
+                Fondasi Pertama
+              </h3>
+              <p
+                vz
+                XC
+                SZ?
+                3S
+                0
+                id="hist-desc"
+                class="text-gray-500 leading-relaxed font-light"
+              >
+                Didirikan di Yogyakarta sebagai pusat pelestarian seni bela diri
+                asli Nusantara dengan nilai budi luhur.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex md:hidden gap-6 mt-4">
+            <button
+              onclick="prevHistory()"
+              class="bg-slate-100 p-4 rounded-full"
+            >
+              <i class="fas fa-arrow-left"></i>
+            </button>
+            <button
+              onclick="nextHistory()"
+              class="bg-red-700 text-white p-4 rounded-full"
+            >
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="py-32 bg-white px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row gap-16 items-center">
+          <div class="md:w-1/2">
+            <span
+              class="text-red-600 font-black tracking-[0.4em] text-[10px] uppercase mb-4 block"
+              >Filosofi Perguruan</span
+            >
+            <h2
+              class="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-tight mb-8"
+            >
+              ADAB DI ATAS <span class="text-red-700">ILMU.</span><br />RAGA
+              UNTUK <span class="outline-text-dark">SEMESATA.</span>
+            </h2>
+            <p class="text-gray-500 leading-relaxed font-light mb-6">
+              Kami percaya bahwa kekuatan tanpa karakter adalah kehancuran.
+              Gardasi mendidik setiap warga untuk menjadi pelindung, bukan
+              penindas. Melalui teknik silat yang presisi, kami membentuk mental
+              baja yang rendah hati.
+            </p>
+            <div class="grid grid-cols-2 gap-8 border-t border-slate-100 pt-8">
+              <div>
+                <h4 class="font-black text-sm uppercase mb-2 text-red-700">
+                  | Visi
+                </h4>
+                <p class="text-xs text-gray-400">
+                  Menjadi barometer pencak silat dunia yang berbasis tradisi dan
+                  teknologi.
+                </p>
+              </div>
+              <div>
+                <h4 class="font-black text-sm uppercase mb-2 text-red-700">
+                  | Misi
+                </h4>
+                <p class="text-xs text-gray-400">
+                  Mencetak atlet beradab dengan pembinaan spiritual dan fisik
+                  yang seimbang.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-1/2 relative">
+            <div
+              class="absolute -inset-4 border border-red-700/20 rounded-2xl rotate-3"
+            ></div>
+            <img
+              src="./img/about1.JPG"
+              class="relative z-10 rounded-2xl grayscale shadow-2xl"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="struktur-organisasi"
+      class="py-32 bg-slate-950 text-white overflow-hidden px-6"
+    >
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-20">
+          <h2
+            class="text-3xl font-black uppercase italic tracking-tighter mb-2"
+          >
+            Dewan <span class="text-red-600">Pimpinan</span>
+          </h2>
+          <div class="w-20 h-1 bg-red-700 mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 mb-32">
+          <div
+            class="group relative overflow-hidden rounded-3xl bg-white/5 p-1 border border-white/10"
+          >
+            <div class="relative h-96 overflow-hidden rounded-2xl">
+              <img
+                src="./img/mas manda.JPG"
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"
+              ></div>
+              <div class="absolute bottom-6 left-6 text-left">
+                <span
+                  class="text-[10px] font-bold text-red-500 uppercase tracking-widest"
+                  >Ketua Umum</span
+                >
+                <h4 class="text-2xl font-black uppercase italic">Mas Manda</h4>
+              </div>
+            </div>
+          </div>
+          <div
+            class="group relative overflow-hidden rounded-3xl bg-white/5 p-1 border border-white/10"
+          >
+            <div class="relative h-96 overflow-hidden rounded-2xl">
+              <img
+                src="./img/mas_pandu.JPG"
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"
+              ></div>
+              <div class="absolute bottom-6 left-6 text-left">
+                <span
+                  class="text-[10px] font-bold text-red-500 uppercase tracking-widest"
+                  >Wakil Ketua Umum</span
+                >
+                <h4 class="text-2xl font-black uppercase italic">Mas Pandu</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 mb-10">
+          <span class="text-red-700 font-black text-2xl">|</span>
+          <h3 class="text-xl font-black uppercase italic tracking-tight">
+            Dewan Pendekar
+          </h3>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-8 mb-32">
+          <div class="group text-left">
+            <div
+              class="aspect-square overflow-hidden rounded-2xl mb-4 border border-white/10 shadow-xl"
+            >
+              <img
+                src="./img/masagus.JPG"
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
+              />
+            </div>
+            <h5 class="text-xs font-black uppercase tracking-tighter">
+              Mas Agus
+            </h5>
+            <p
+              class="text-[9px] text-red-600 font-bold uppercase tracking-widest mt-1"
+            >
+              Divisi Penasihat
+            </p>
+          </div>
+          <div class="group text-left">
+            <div
+              class="aspect-square overflow-hidden rounded-2xl mb-4 border border-white/10 shadow-xl"
+            >
+              <img
+                src="./img/mas manda.JPG"
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
+              />
+            </div>
+            <h5 class="text-xs font-black uppercase tracking-tighter">
+              Mas Manda
+            </h5>
+            <p
+              class="text-[9px] text-red-600 font-bold uppercase tracking-widest mt-1"
+            >
+              Divisi Penasihat
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between mb-10">
+          <div class="flex items-center gap-4">
+            <span class="text-red-700 font-black text-2xl">|</span>
+            <h3
+              class="text-xl font-black uppercase italic tracking-tight text-white"
+            >
+              Warga Gardasi
+            </h3>
+          </div>
+          <div
+            class="text-[9px] text-gray-500 font-bold uppercase tracking-[0.2em] hidden md:block"
+          >
+            Tahan untuk Berhenti
+          </div>
+        </div>
+
+        <div class="swiper wargaSwiper overflow-hidden">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide group text-left">
+              <div
+                class="aspect-[4/5] overflow-hidden rounded-xl mb-3 border border-white/5"
+              >
+                <img
+                  src="./img/irsyad.JPG"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
+                />
+              </div>
+              <h5 class="text-[11px] font-bold uppercase text-white truncate">
+                M Afrizal Irsyad
+              </h5>
+              <p class="text-[9px] text-gray-500 uppercase font-medium">
+                Warga 25
+              </p>
+            </div>
+
+            <div class="swiper-slide group text-left">
+              <div
+                class="aspect-[4/5] overflow-hidden rounded-xl mb-3 border border-white/5"
+              >
+                <img
+                  src="./img/nabila.JPG"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
+                />
+              </div>
+              <h5 class="text-[11px] font-bold uppercase text-white truncate">
+                Mbk Nabila
+              </h5>
+              <p class="text-[9px] text-gray-500 uppercase font-medium">
+                Warga 25
+              </p>
+            </div>
+
+            <div class="swiper-slide group text-left">
+              <div
+                class="aspect-[4/5] overflow-hidden rounded-xl mb-3 border border-white/5"
+              >
+                <img
+                  src="./img/rara.JPG"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
+                />
+              </div>
+              <h5 class="text-[11px] font-bold uppercase text-white truncate">
+                Rara
+              </h5>
+              <p class="text-[9px] text-gray-500 uppercase font-medium">
+                Warga 25
+              </p>
+            </div>
+
+            <div class="swiper-slide group text-left">
+              <div
+                class="aspect-[4/5] overflow-hidden rounded-xl mb-3 border border-white/5"
+              >
+                <img
+                  src="./img/indah.JPG"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
+                />
+              </div>
+              <h5 class="text-[11px] font-bold uppercase text-white truncate">
+                Indah
+              </h5>
+              <p class="text-[9px] text-gray-500 uppercase font-medium">
+                Warga 25
+              </p>
+            </div>
+
+            <div class="swiper-slide group text-left">
+              <div
+                class="aspect-[4/5] overflow-hidden rounded-xl mb-3 border border-white/5"
+              >
+                <img
+                  src="./img/mbk_wulan.JPG"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
+                />
+              </div>
+              <h5 class="text-[11px] font-bold uppercase text-white truncate">
+                Mbk Wulan
+              </h5>
+              <p class="text-[9px] text-gray-500 uppercase font-medium">
+                Warga 25
+              </p>
+            </div>
+
+            <div class="swiper-slide group text-left">
+              <div
+                class="aspect-[4/5] overflow-hidden rounded-xl mb-3 border border-white/5"
+              >
+                <img
+                  src="./img/mas_pandu.JPG"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
+                />
+              </div>
+              <h5 class="text-[11px] font-bold uppercase text-white truncate">
+                Mas Pandu
+              </h5>
+              <p class="text-[9px] text-gray-500 uppercase font-medium">
+                Warga 25
+              </p>
+            </div>
+
+            <div class="swiper-slide group text-left">
+              <div
+                class="aspect-[4/5] overflow-hidden rounded-xl mb-3 border border-white/5"
+              >
+                <img
+                  src="./img/masagus.JPG"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
+                />
+              </div>
+              <h5 class="text-[11px] font-bold uppercase text-white truncate">
+                Mas Agus
+              </h5>
+              <p class="text-[9px] text-gray-500 uppercase font-medium">
+                Warga 25
+              </p>
+            </div>
+          </div>
+
+          <div class="swiper-pagination !bottom-0 !relative mt-10"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prestasi" class="py-32 bg-white px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex justify-between items-end mb-16">
+          <div>
+            <h2 class="text-4xl font-black uppercase italic tracking-tighter">
+              Hall of <span class="text-red-700">Champions</span>
+            </h2>
+            <p
+              class="text-gray-400 text-xs mt-2 uppercase tracking-widest font-bold"
+            >
+              Prestasi Anggota Terbaik
+            </p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-10">
+          <div
+            class="group border-b-2 border-transparent hover:border-red-700 transition-all duration-500 pb-8"
+          >
+            <div
+              class="relative aspect-square overflow-hidden rounded-2xl mb-6 shadow-xl"
+            >
+              <img
+                src="./img/lombagps.JPG"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+              />
+              <div
+                class="absolute top-4 right-4 bg-red-700 text-white text-[10px] font-black px-4 py-1 rounded-full italic"
+              >
+                JUARA 1
+              </div>
+            </div>
+            <div class="space-y-3">
+              <div class="flex justify-between items-center">
+                <h4 class="text-xl font-black uppercase italic tracking-tight">
+                  Lomba GPS
+                </h4>
+                <span class="text-[10px] font-black text-gray-400"
+                  >12 MEI 2024</span
+                >
+              </div>
+              <p
+                class="text-xs font-bold text-red-600 uppercase tracking-widest"
+              >
+                Kejuaraan Nasional O2SN
+              </p>
+              <p class="text-gray-500 text-xs leading-relaxed font-light">
+                Berhasil meraih medali emas setelah menumbangkan 12 kontingen
+                provinsi dalam kategori Tanding Kelas C Putra.
+              </p>
+              <div
+                class="pt-4 flex gap-4 text-[9px] font-black text-gray-300 uppercase"
+              >
+                <span>Power: 98%</span>
+                <span>|</span>
+                <span>Speed: 95%</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="group border-b-2 border-transparent hover:border-red-700 transition-all duration-500 pb-8"
+          >
+            <div
+              class="relative aspect-square overflow-hidden rounded-2xl mb-6 shadow-xl"
+            >
+              <img
+                src="./img/gs.jpeg"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+              />
+              <div
+                class="absolute top-4 right-4 bg-red-700 text-white text-[10px] font-black px-4 py-1 rounded-full italic"
+              >
+                JUARA 1
+              </div>
+            </div>
+            <div class="space-y-3">
+              <div class="flex justify-between items-center">
+                <h4 class="text-xl font-black uppercase italic tracking-tight">
+                  Lomba SSA
+                </h4>
+                <span class="text-[10px] font-black text-gray-400"
+                  >12 MEI 2024</span
+                >
+              </div>
+              <p
+                class="text-xs font-bold text-red-600 uppercase tracking-widest"
+              >
+                Kejuaraan Nasional O2SN
+              </p>
+              <p class="text-gray-500 text-xs leading-relaxed font-light">
+                Berhasil meraih medali emas setelah menumbangkan 12 kontingen
+                provinsi dalam kategori Tanding Kelas C Putra.
+              </p>
+              <div
+                class="pt-4 flex gap-4 text-[9px] font-black text-gray-300 uppercase"
+              >
+                <span>Power: 98%</span>
+                <span>|</span>
+                <span>Speed: 95%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kolaborasi" class="py-32 bg-slate-50 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div
+          class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-4"
+        >
+          <div>
+            <span
+              class="text-red-600 font-black tracking-[0.4em] text-[10px] uppercase mb-2 block"
+              >Pusat Pelatihan</span
+            >
+            <h2 class="text-4xl font-black uppercase italic tracking-tighter">
+              Daftar <span class="text-red-700">Kolat</span> Nusantara
+            </h2>
+          </div>
+          <p
+            class="text-gray-400 text-[10px] font-bold uppercase tracking-widest max-w-xs md:text-right"
+          >
+            Titik persebaran komisariat latihan aktif di berbagai wilayah.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="group bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-500 relative overflow-hidden"
+          >
+            <div
+              class="absolute top-0 right-0 p-6 opacity-5 group-hover:scale-110 transition-transform"
+            >
+              <i class="fas fa-fist-raised text-6xl"></i>
+            </div>
+
+            <div
+              class="inline-block px-4 py-1 rounded-full bg-red-700/10 text-red-700 text-[9px] font-black uppercase tracking-widest mb-6"
+            >
+              Unit Pusat
+            </div>
+
+            <h4 class="text-xl font-black uppercase mb-6 tracking-tighter">
+              Kolat Yogyakarta
+            </h4>
+
+            <div class="space-y-4">
+              <div
+                class="flex justify-between items-center border-b border-slate-100 pb-2"
+              >
+                <span class="text-[10px] text-gray-400 font-bold uppercase"
+                  >Pelatih</span
+                >
+                <span class="text-xs font-black uppercase">Mas Manda</span>
+              </div>
+              <div
+                class="flex justify-between items-center border-b border-slate-100 pb-2"
+              >
+                <span class="text-[10px] text-gray-400 font-bold uppercase"
+                  >Jumlah Peserta</span
+                >
+                <span class="text-xs font-black uppercase">85 Warga</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-[10px] text-gray-400 font-bold uppercase"
+                  >Aktif Sejak</span
+                >
+                <span class="text-xs font-black uppercase text-red-700"
+                  >12 Jan 1985</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="group bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-500 relative overflow-hidden"
+          >
+            <div
+              class="absolute top-0 right-0 p-6 opacity-5 group-hover:scale-110 transition-transform"
+            >
+              <i class="fas fa-fist-raised text-6xl"></i>
+            </div>
+
+            <div
+              class="inline-block px-4 py-1 rounded-full bg-red-700/10 text-red-700 text-[9px] font-black uppercase tracking-widest mb-6"
+            >
+              Unit Cabang
+            </div>
+
+            <h4 class="text-xl font-black uppercase mb-6 tracking-tighter">
+              Kolat Bantul
+            </h4>
+
+            <div class="space-y-4">
+              <div
+                class="flex justify-between items-center border-b border-slate-100 pb-2"
+              >
+                <span class="text-[10px] text-gray-400 font-bold uppercase"
+                  >Pelatih</span
+                >
+                <span class="text-xs font-black uppercase">Mas Pandu</span>
+              </div>
+              <div
+                class="flex justify-between items-center border-b border-slate-100 pb-2"
+              >
+                <span class="text-[10px] text-gray-400 font-bold uppercase"
+                  >Jumlah Peserta</span
+                >
+                <span class="text-xs font-black uppercase">42 Warga</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-[10px] text-gray-400 font-bold uppercase"
+                  >Aktif Sejak</span
+                >
+                <span class="text-xs font-black uppercase text-red-700"
+                  >05 Mar 2012</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="group bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-500 relative overflow-hidden"
+          >
+            <div
+              class="absolute top-0 right-0 p-6 opacity-5 group-hover:scale-110 transition-transform"
+            >
+              <i class="fas fa-fist-raised text-6xl"></i>
+            </div>
+
+            <div
+              class="inline-block px-4 py-1 rounded-full bg-red-700/10 text-red-700 text-[9px] font-black uppercase tracking-widest mb-6"
+            >
+              Unit Pendidikan
+            </div>
+
+            <h4 class="text-xl font-black uppercase mb-6 tracking-tighter">
+              Kolat Kampus UTDI
+            </h4>
+
+            <div class="space-y-4">
+              <div
+                class="flex justify-between items-center border-b border-slate-100 pb-2"
+              >
+                <span class="text-[10px] text-gray-400 font-bold uppercase"
+                  >Pelatih</span
+                >
+                <span class="text-xs font-black uppercase text-red-700"
+                  >Hidayah Adyan</span
+                >
+              </div>
+              <div
+                class="flex justify-between items-center border-b border-slate-100 pb-2"
+              >
+                <span class="text-[10px] text-gray-400 font-bold uppercase"
+                  >Jumlah Peserta</span
+                >
+                <span class="text-xs font-black uppercase">30 Warga</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-[10px] text-gray-400 font-bold uppercase"
+                  >Aktif Sejak</span
+                >
+                <span class="text-xs font-black uppercase text-red-700"
+                  >20 Nov 2025</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="daftar" class="py-32 bg-white px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-20 items-center">
+          <div>
+            <span
+              class="text-red-600 font-black tracking-[0.4em] text-[10px] uppercase mb-4 block"
+              >Pendaftaran Warga Baru</span
+            >
+            <h2
+              class="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-tight mb-8"
+            >
+              BERGABUNG MENJADI
+              <span class="text-red-700">SATRIA</span> NUSANTARA.
+            </h2>
+            <p class="text-gray-500 leading-relaxed font-light mb-10">
+              Kami membuka pintu bagi siapa saja yang ingin menanamkan disiplin,
+              memperkuat raga, dan menjaga warisan budaya bangsa.
+            </p>
+
+            <ul class="space-y-6">
+              <li class="flex items-start gap-4">
+                <div
+                  class="w-6 h-6 rounded-full bg-red-700 text-white flex items-center justify-center text-[10px] shrink-0 mt-1"
+                >
+                  1
+                </div>
+                <div>
+                  <h5 class="font-black uppercase text-sm tracking-tight">
+                    Administrasi Dasar
+                  </h5>
+                  <p class="text-xs text-gray-400 mt-1">
+                    Mengisi formulir pendaftaran dan menyerahkan pas foto 3x4 (2
+                    lembar).
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div
+                  class="w-6 h-6 rounded-full bg-red-700 text-white flex items-center justify-center text-[10px] shrink-0 mt-1"
+                >
+                  2
+                </div>
+                <div>
+                  <h5 class="font-black uppercase text-sm tracking-tight">
+                    Sehat Jasmani & Rohani
+                  </h5>
+                  <p class="text-xs text-gray-400 mt-1">
+                    Tidak memiliki riwayat penyakit berat yang membahayakan saat
+                    latihan fisik.
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div
+                  class="w-6 h-6 rounded-full bg-red-700 text-white flex items-center justify-center text-[10px] shrink-0 mt-1"
+                >
+                  3
+                </div>
+                <div>
+                  <h5 class="font-black uppercase text-sm tracking-tight">
+                    Komitmen & Adab
+                  </h5>
+                  <p class="text-xs text-gray-400 mt-1">
+                    Sanggup mematuhi kode etik perguruan dan menghormati sesama
+                    warga.
+                  </p>
+                </div>
+              </li>
+            </ul>
+
+            <a
+              href="#"
+              class="inline-block mt-12 bg-black text-white px-10 py-4 rounded-full font-black uppercase text-[10px] tracking-[0.2em] hover:bg-red-700 transition-colors shadow-xl"
+            >
+              Daftar Sekarang
+            </a>
+          </div>
+
+          <div
+            class="bg-slate-50 p-8 md:p-12 rounded-[40px] border border-slate-100"
+          >
+            <h3
+              class="text-2xl font-black uppercase italic tracking-tighter mb-8 text-center"
+            >
+              Pertanyaan <span class="text-red-700">Umum</span>
+            </h3>
+
+            <div class="space-y-4">
+              <div class="faq-item border-b border-slate-200 pb-4">
+                <button
+                  onclick="toggleFAQ(this)"
+                  class="w-full flex justify-between items-center text-left group"
+                >
+                  <span
+                    class="text-xs font-black uppercase tracking-tight group-hover:text-red-700 transition-colors"
+                    >Apakah ada batasan usia?</span
+                  >
+                  <i
+                    class="fas fa-plus text-[10px] text-gray-300 transition-transform duration-300"
+                  ></i>
+                </button>
+                <div class="faq-answer hidden mt-4">
+                  <p class="text-xs text-gray-500 leading-relaxed font-light">
+                    Tidak ada batasan usia yang kaku. Kami menerima siswa mulai
+                    dari usia sekolah dasar hingga dewasa, dengan porsi latihan
+                    yang disesuaikan.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item border-b border-slate-200 pb-4">
+                <button
+                  onclick="toggleFAQ(this)"
+                  class="w-full flex justify-between items-center text-left group"
+                >
+                  <span
+                    class="text-xs font-black uppercase tracking-tight group-hover:text-red-700 transition-colors"
+                    >Berapa biaya iuran bulanan?</span
+                  >
+                  <i
+                    class="fas fa-plus text-[10px] text-gray-300 transition-transform duration-300"
+                  ></i>
+                </button>
+                <div class="faq-answer hidden mt-4">
+                  <p class="text-xs text-gray-500 leading-relaxed font-light">
+                    Biaya iuran (SPP) bervariasi tergantung pada masing-masing
+                    Kolat, namun tetap terjangkau untuk mendukung operasional
+                    tempat latihan.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item border-b border-slate-200 pb-4">
+                <button
+                  onclick="toggleFAQ(this)"
+                  class="w-full flex justify-between items-center text-left group"
+                >
+                  <span
+                    class="text-xs font-black uppercase tracking-tight group-hover:text-red-700 transition-colors"
+                    >Kapan jadwal latihan rutin?</span
+                  >
+                  <i
+                    class="fas fa-plus text-[10px] text-gray-300 transition-transform duration-300"
+                  ></i>
+                </button>
+                <div class="faq-answer hidden mt-4">
+                  <p class="text-xs text-gray-500 leading-relaxed font-light">
+                    Secara umum latihan diadakan 2 kali seminggu pada sore atau
+                    malam hari. Jadwal spesifik dapat dilihat pada detail tiap
+                    Kolat.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button
+                  onclick="toggleFAQ(this)"
+                  class="w-full flex justify-between items-center text-left group"
+                >
+                  <span
+                    class="text-xs font-black uppercase tracking-tight group-hover:text-red-700 transition-colors"
+                    >Apakah ada ujian kenaikan tingkat?</span
+                  >
+                  <i
+                    class="fas fa-plus text-[10px] text-gray-300 transition-transform duration-300"
+                  ></i>
+                </button>
+                <div class="faq-answer hidden mt-4">
+                  <p class="text-xs text-gray-500 leading-relaxed font-light">
+                    Ya, kami memiliki kurikulum terstruktur. Ujian kenaikan
+                    sabuk diadakan secara berkala untuk mengevaluasi kemampuan
+                    fisik dan mental warga.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="aktivitas" class="py-32 bg-white px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-20">
+          <span
+            class="text-red-600 font-black tracking-[0.4em] text-[10px] uppercase mb-4 block"
+            >Galeri Kegiatan</span
+          >
+          <h2
+            class="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-tight"
+          >
+            DENYUT <span class="text-red-700">NADI</span> PERGURUAN.
+          </h2>
+          <div class="w-20 h-1 bg-red-700 mx-auto mt-6"></div>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[700px]"
+        >
+          <div
+            class="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-[32px] bg-slate-900"
+          >
+            <img
+              src="./img/Sd_GadingHarjo.JPG"
+              class="w-full h-full object-cover opacity-60 group-hover:scale-110 group-hover:rotate-2 transition duration-700 grayscale group-hover:grayscale-0"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"
+            ></div>
+            <div class="absolute bottom-10 left-10">
+              <span
+                class="bg-red-700 text-white text-[9px] font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-3 inline-block"
+                >Rutin</span
+              >
+              <h4 class="text-2xl font-black text-white uppercase italic">
+                Olah Raga & Rasa
+              </h4>
+              <p class="text-gray-400 text-xs mt-2 font-light max-w-xs">
+                Latihan fisik dan pemantapan teknik dasar setiap malam Selasa
+                dan Jumat.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="md:col-span-2 group relative overflow-hidden rounded-[32px] bg-slate-900"
+          >
+            <img
+              src="./img/smp2pundong.JPG"
+              class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700 grayscale group-hover:grayscale-0"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"
+            ></div>
+            <div class="absolute bottom-8 left-8">
+              <span
+                class="text-red-500 text-[9px] font-bold uppercase tracking-widest mb-1 block"
+                >Semester</span
+              >
+              <h4 class="text-lg font-black text-white uppercase italic">
+                Ujian Sabuk
+              </h4>
+            </div>
+          </div>
+
+          <div
+            class="group relative overflow-hidden rounded-[32px] bg-slate-100 border border-slate-200"
+          >
+            <div class="p-8 h-full flex flex-col justify-end">
+              <div
+                class="w-10 h-10 bg-red-700 rounded-2xl flex items-center justify-center text-white mb-4 group-hover:rotate-12 transition"
+              >
+                <i class="fas fa-hands-helping"></i>
+              </div>
+              <h4 class="text-sm font-black uppercase tracking-tight">
+                Bakti Sosial
+              </h4>
+              <p class="text-[10px] text-gray-400 mt-2">
+                Implementasi nilai luhur dalam pengabdian masyarakat.
+              </p>
+            </div>
+          </div>
+
+          <div class="group relative overflow-hidden rounded-[32px] bg-red-700">
+            <div class="p-8 h-full flex flex-col justify-end">
+              <div
+                class="text-white/20 absolute top-[-10px] right-[-10px] text-8xl rotate-12"
+              >
+                <i class="fas fa-trophy"></i>
+              </div>
+              <h4
+                class="text-sm font-black uppercase tracking-tight text-white"
+              >
+                Open Tournament
+              </h4>
+              <p class="text-[10px] text-red-200 mt-2 italic">
+                Mengasah mental juara di kancah nasional.
+              </p>
+              <div class="mt-4 flex -space-x-2">
+                <img
+                  class="inline-block h-6 w-6 rounded-full ring-2 ring-red-700"
+                  src="./img/begroon.JPG"
+                  alt=""
+                />
+                <img
+                  class="inline-block h-6 w-6 rounded-full ring-2 ring-red-700"
+                  src="./img/lombagps.JPG"
+                  alt=""
+                />
+                <img
+                  class="inline-block h-6 w-6 rounded-full ring-2 ring-red-700"
+                  src="./img/ujian.JPG"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="informasi"
+      class="py-32 bg-slate-950 text-white px-6 overflow-hidden"
+    >
+      <div class="max-w-6xl mx-auto">
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6"
+        >
+          <div class="relative">
+            <span
+              class="text-red-600 font-black tracking-[0.4em] text-[10px] uppercase mb-4 block"
+              >Warta Perguruan</span
+            >
+            <h2
+              class="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-tight italic"
+            >
+              PAPAN <span class="text-red-700">INFORMASI</span>
+            </h2>
+            <div
+              class="absolute -left-10 top-0 w-1 h-full bg-red-700 opacity-50 hidden md:block"
+            ></div>
+          </div>
+          <div class="text-right">
+            <p
+              class="text-gray-500 text-[10px] font-bold uppercase tracking-[0.2em]"
+            >
+              Pembaruan Terakhir: 1 April 2026
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <div class="lg:col-span-7 group">
+            <div
+              class="relative overflow-hidden rounded-[40px] aspect-video mb-8 border border-white/10"
+            >
+              <img
+                src="./img/begroon.JPG"
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-1000 group-hover:scale-105"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"
+              ></div>
+              <div
+                class="absolute top-6 left-6 bg-red-700 text-white text-[9px] font-black px-4 py-1 rounded-full uppercase italic"
+              >
+                Penting
+              </div>
+              <div class="absolute bottom-10 left-10 right-10">
+                <h3
+                  class="text-3xl font-black uppercase italic leading-none mb-4 group-hover:text-red-500 transition"
+                >
+                  Ujian Kenaikan Tingkat Nasional 2026
+                </h3>
+                <p class="text-sm text-gray-400 font-light line-clamp-2">
+                  Persiapkan fisik dan mental. Pelaksanaan serentak akan
+                  dipusatkan di Padepokan Pusat Yogyakarta pada akhir bulan ini.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 space-y-6">
+            <div
+              class="flex gap-6 group cursor-pointer border-b border-white/5 pb-6"
+            >
+              <div
+                class="shrink-0 w-24 h-24 rounded-2xl overflow-hidden bg-slate-900 border border-white/10"
+              >
+                <img
+                  src="./img/Sd_GadingHarjo.JPG"
+                  class="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition"
+                />
+              </div>
+              <div class="flex flex-col justify-center">
+                <span class="text-red-600 text-[9px] font-black uppercase mb-1"
+                  >Agenda</span
+                >
+                <h4
+                  class="text-sm font-black uppercase italic leading-tight group-hover:text-red-500 transition"
+                >
+                  Latihan Gabungan Lintas Kolat DIY
+                </h4>
+                <p class="text-[10px] text-gray-500 mt-2">
+                  Minggu, 12 April | Alun-alun Utara Yogyakarta
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="flex gap-6 group cursor-pointer border-b border-white/5 pb-6"
+            >
+              <div
+                class="shrink-0 w-24 h-24 rounded-2xl overflow-hidden bg-slate-900 border border-white/10"
+              >
+                <img
+                  src="./img/lombagps.JPG"
+                  class="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition"
+                />
+              </div>
+              <div class="flex flex-col justify-center">
+                <span class="text-red-600 text-[9px] font-black uppercase mb-1"
+                  >Prestasi</span
+                >
+                <h4
+                  class="text-sm font-black uppercase italic leading-tight group-hover:text-red-500 transition"
+                >
+                  Selamat kepada Juara O2SN Nasional
+                </h4>
+                <p class="text-[10px] text-gray-500 mt-2">
+                  Warga Gardasi kembali membawa pulang medali emas kategori
+                  Tanding.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6 group cursor-pointer pb-6">
+              <div
+                class="shrink-0 w-24 h-24 rounded-2xl overflow-hidden bg-slate-900 border border-white/10 flex items-center justify-center"
+              >
+                <i
+                  class="fas fa-file-pdf text-2xl text-red-700 opacity-50 group-hover:opacity-100 transition"
+                ></i>
+              </div>
+              <div class="flex flex-col justify-center">
+                <span class="text-red-600 text-[9px] font-black uppercase mb-1"
+                  >Unduhan</span
+                >
+                <h4
+                  class="text-sm font-black uppercase italic leading-tight group-hover:text-red-500 transition"
+                >
+                  Modul Teknik Dasar Jilid 4
+                </h4>
+                <p class="text-[10px] text-gray-500 mt-2">
+                  Silakan unduh materi ujian terbaru melalui portal anggota.
+                </p>
+              </div>
+            </div>
+
+            <button
+              class="w-full py-4 border border-white/10 rounded-2xl text-[10px] font-black uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all"
+            >
+              Lihat Semua Arsip
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function toggleFAQ(button) {
+        const answer = button.nextElementSibling;
+        const icon = button.querySelector("i");
+
+        // Tutup semua jawaban lain (Optional, hapus jika ingin bisa buka banyak sekaligus)
+        /*
+        document.querySelectorAll('.faq-answer').forEach(el => {
+          if (el !== answer) el.classList.add('hidden');
+        });
+        document.querySelectorAll('.faq-item i').forEach(i => {
+          if (i !== icon) i.classList.replace('fa-minus', 'fa-plus');
+        });
+        */
+
+        // Toggle jawaban yang diklik
+        answer.classList.toggle("hidden");
+
+        // Ganti icon plus/minus
+        if (answer.classList.contains("hidden")) {
+          icon.classList.replace("fa-minus", "fa-plus");
+          icon.style.transform = "rotate(0deg)";
+        } else {
+          icon.classList.replace("fa-plus", "fa-minus");
+          icon.style.transform = "rotate(180deg)";
+        }
+      }
+    </script>
+
+    <style>
+      .outline-text-dark {
+        color: transparent;
+        -webkit-text-stroke: 1px #1e293b;
+      }
+    </style>
+
+    <footer
+      class="py-20 bg-slate-50 border-t border-slate-100 px-6 mb-24 md:mb-0"
+    >
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6"
+      >
+        <div class="font-black text-lg">GDS.CORE</div>
+        <p
+          class="text-[10px] text-gray-400 font-bold uppercase tracking-widest"
+        >
+          &copy; 2026 Perguruan Silat Nusantara
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const navbar = document.getElementById("navbar");
+      const mobileLinks = document.querySelectorAll(".mobile-bottom-nav a");
+      const sections = document.querySelectorAll("section");
+
+      window.onscroll = () => {
+        // 1. Efek Scroll Navbar Desktop
+        if (window.scrollY > 50) {
+          navbar.classList.add("nav-scrolled");
+        } else {
+          navbar.classList.remove("nav-scrolled");
+        }
+
+        // 2. Fitur Active Link (Indikator posisi halaman)
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          if (pageYOffset >= sectionTop - 100) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        mobileLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href").includes(current)) {
+            link.classList.add("active");
+          }
+        });
+      };
+
+      const historyData = [
+        {
+          year: "1985",
+          title: "Fondasi Pertama",
+          desc: "Didirikan di Yogyakarta sebagai pusat pelestarian seni bela diri asli Nusantara dengan nilai budi luhur.",
+          img: "https://images.unsplash.com/photo-1547561070-e402941968d7?auto=format&fit=crop&w=1200",
+        },
+        {
+          year: "2005",
+          title: "Ekspansi Nasional",
+          desc: "Membuka ribuan unit latihan baru di seluruh pelosok negeri, memperkuat persaudaraan antar warga.",
+          img: "https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?auto=format&fit=crop&w=1200",
+        },
+        {
+          year: "2026",
+          title: "Era Modern",
+          desc: "Menghadirkan kurikulum berbasis prestasi internasional tanpa meninggalkan akar tradisi sakral.",
+          img: "https://images.unsplash.com/photo-1508801935509-22348a040bc6?auto=format&fit=crop&w=1200",
+        },
+      ];
+
+      let currentIndex = 0;
+
+      function updateDisplay() {
+        const data = historyData[currentIndex];
+        const imgEl = document.getElementById("hist-img");
+
+        imgEl.style.opacity = "0.5";
+        imgEl.style.transform = "scale(1.05)";
+
+        setTimeout(() => {
+          document.getElementById("hist-year").innerText = data.year;
+          document.getElementById("hist-title").innerText = data.title;
+          document.getElementById("hist-desc").innerText = data.desc;
+          imgEl.src = data.img;
+          imgEl.style.opacity = "1";
+          imgEl.style.transform = "scale(1)";
+        }, 300);
+      }
+
+      function nextHistory() {
+        currentIndex = (currentIndex + 1) % historyData.length;
+        updateDisplay();
+      }
+
+      function prevHistory() {
+        currentIndex =
+          (currentIndex - 1 + historyData.length) % historyData.length;
+        updateDisplay();
+      }
+
+      // Navbar Scroll effect
+      window.addEventListener("scroll", () => {
+        const nav = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+          nav.classList.add("nav-scrolled");
+        } else {
+          nav.classList.remove("nav-scrolled");
+        }
+      });
+    </script>
+    <script>
+      var swiper = new Swiper(".wargaSwiper", {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        loop: true,
+        grabCursor: true, // Kursor jadi tangan saat hover
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false, // PENTING: Agar autoplay jalan lagi setelah disentuh
+          pauseOnMouseEnter: true, // Berhenti saat mouse di atas (Desktop)
+        },
+        breakpoints: {
+          640: { slidesPerView: 3 },
+          1024: { slidesPerView: 5 },
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          dynamicBullets: true,
+        },
+      });
+
+      // LOGIKA KHUSUS MOBILE: Berhenti saat ditekan, Jalan saat dilepas
+      const swiperEl = document.querySelector(".wargaSwiper");
+
+      swiperEl.addEventListener("touchstart", function () {
+        swiper.autoplay.stop();
+      });
+
+      swiperEl.addEventListener("touchend", function () {
+        swiper.autoplay.start();
+      });
+    </script>
+  </body>
+</html>
