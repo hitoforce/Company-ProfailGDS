@@ -1213,125 +1213,240 @@
       </div>
     </section>
 
-    <section id="aktivitas" class="py-32 bg-white px-6">
-      <div class="max-w-6xl mx-auto">
-        <div class="text-center mb-20">
-          <span
-            class="text-red-600 font-black tracking-[0.4em] text-[10px] uppercase mb-4 block"
-            >Galeri Kegiatan</span
+    <section
+      id="aktivitas"
+      class="py-20 md:py-32 bg-slate-50 px-6 overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-12 md:mb-20">
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between gap-6"
           >
-          <h2
-            class="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-tight"
-          >
-            DENYUT <span class="text-red-700">NADI</span> PERGURUAN.
-          </h2>
-          <div class="w-20 h-1 bg-red-700 mx-auto mt-6"></div>
+            <div class="max-w-2xl">
+              <span
+                class="text-red-600 font-black tracking-[0.3em] text-[10px] uppercase mb-4 block"
+                >Galeri Kegiatan</span
+              >
+              <h2
+                class="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-[0.9]"
+              >
+                DENYUT
+                <span
+                  class="text-red-700 underline decoration-4 underline-offset-8"
+                  >NADI</span
+                ><br />PERGURUAN.
+              </h2>
+            </div>
+            <p
+              class="text-slate-500 text-sm max-w-xs border-l-2 border-red-700 pl-4 py-2"
+            >
+              Rekam jejak dedikasi, prestasi, dan pengabdian dalam menjaga
+              marwah bela diri nusantara.
+            </p>
+          </div>
         </div>
 
         <div
-          class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[700px]"
+          class="flex flex-col md:grid md:grid-cols-4 lg:grid-cols-5 gap-4 lg:gap-6 h-auto md:h-[800px] lg:h-[900px]"
         >
           <div
-            class="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-[32px] bg-slate-900"
+            class="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-[40px] bg-slate-900 h-[450px] md:h-full shadow-2xl transition-all duration-500 hover:shadow-red-500/10"
           >
             <img
-              src="./img/kegiatan/syawalan/eyang.JPG"
-              class="w-full h-full object-cover opacity-60 group-hover:scale-110 group-hover:rotate-2 transition duration-700 grayscale group-hover:grayscale-0"
+              src="./img/kegiatan/utama.JPG"
+              alt="Syawalan"
+              class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-[1.5s] grayscale group-hover:grayscale-0"
             />
             <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"
+              class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"
             ></div>
-            <div class="absolute bottom-10 left-10">
-              <span
-                class="bg-red-700 text-white text-[9px] font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-3 inline-block"
-                >Rutin</span
-              >
-              <h4 class="text-2xl font-black text-white uppercase italic">
-                Syawalan & tradisi besekan
-              </h4>
-              <p class="text-gray-400 text-xs mt-2 font-light max-w-xs">
-                Acara rutin yang dilaksanakan setiap tahun ada kebersamaan dan
-                solidaritas.
-              </p>
-            </div>
-          </div>
 
-          <div
-            class="md:col-span-2 group relative overflow-hidden rounded-[32px] bg-slate-900"
-          >
-            <img
-              src="./img/smp2pundong.JPG"
-              class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700 grayscale group-hover:grayscale-0"
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"
-            ></div>
-            <div class="absolute bottom-8 left-8">
-              <span
-                class="text-red-500 text-[9px] font-bold uppercase tracking-widest mb-1 block"
-                >Semester</span
-              >
-              <h4 class="text-lg font-black text-white uppercase italic">
-                Ujian Sabuk
-              </h4>
-            </div>
-          </div>
-
-          <div
-            class="group relative overflow-hidden rounded-[32px] bg-slate-100 border border-slate-200"
-          >
-            <div class="p-8 h-full flex flex-col justify-end">
+            <div class="absolute top-8 left-8">
               <div
-                class="w-10 h-10 bg-red-700 rounded-2xl flex items-center justify-center text-white mb-4 group-hover:rotate-12 transition"
+                class="backdrop-blur-md bg-white/10 border border-white/20 px-4 py-2 rounded-2xl"
               >
-                <i class="fas fa-hands-helping"></i>
+                <span
+                  class="text-white text-[10px] font-bold uppercase tracking-widest"
+                  >Headline • 2026</span
+                >
               </div>
-              <h4 class="text-sm font-black uppercase tracking-tight">
-                Bakti Sosial
-              </h4>
-              <p class="text-[10px] text-gray-400 mt-2">
-                Implementasi nilai luhur dalam pengabdian masyarakat.
-              </p>
             </div>
-          </div>
 
-          <div class="group relative overflow-hidden rounded-[32px] bg-red-700">
-            <div class="p-8 h-full flex flex-col justify-end">
-              <div
-                class="text-white/20 absolute top-[-10px] right-[-10px] text-8xl rotate-12"
-              >
-                <i class="fas fa-trophy"></i>
-              </div>
+            <div class="absolute bottom-10 left-10 right-10">
               <h4
-                class="text-sm font-black uppercase tracking-tight text-white"
+                class="text-3xl md:text-5xl font-black text-white uppercase italic leading-none mb-4"
               >
-                Open Tournament
+                Syawalan & <br />
+                Tradisi Besekan
               </h4>
-              <p class="text-[10px] text-red-200 mt-2 italic">
-                Mengasah mental juara di kancah nasional.
+              <p
+                class="text-gray-300 text-sm font-light leading-relaxed mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 hidden md:block"
+              >
+                Momentum sakral untuk mempererat tali persaudaraan antar warga
+                melalui pembagian berkat dalam besek bambu.
               </p>
-              <div class="mt-4 flex -space-x-2">
-                <img
-                  class="inline-block h-6 w-6 rounded-full ring-2 ring-red-700"
-                  src="./img/begroon.JPG"
-                  alt=""
-                />
-                <img
-                  class="inline-block h-6 w-6 rounded-full ring-2 ring-red-700"
-                  src="./img/lombagps.JPG"
-                  alt=""
-                />
-                <img
-                  class="inline-block h-6 w-6 rounded-full ring-2 ring-red-700"
-                  src="./img/ujian.JPG"
-                  alt=""
-                />
+              <div class="flex items-center gap-4 mt-2">
+                <span
+                  class="flex items-center text-red-500 text-[10px] font-black uppercase tracking-widest"
+                >
+                  <i class="fas fa-map-marker-alt mr-2"></i> Pusat, Yogyakarta
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex md:contents overflow-x-auto pb-6 md:pb-0 gap-4 snap-x snap-mandatory no-scrollbar"
+          >
+            <div
+              class="min-w-[280px] md:min-w-0 snap-center group relative overflow-hidden rounded-[32px] bg-slate-800 h-[300px] md:h-auto border border-white/10 shadow-lg"
+            >
+              <img
+                src="./img/kegiatan/1.JPG"
+                class="w-full h-full object-cover opacity-50 group-hover:scale-110 transition duration-700 grayscale group-hover:grayscale-0"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"
+              ></div>
+              <div class="absolute bottom-6 left-6 right-6">
+                <h5 class="text-sm font-black text-white uppercase italic">
+                  Latihan Rutin
+                </h5>
+                <p
+                  class="text-[10px] text-red-500 font-bold mt-1 uppercase tracking-tighter"
+                >
+                  Minggu Sore • Pundong
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="min-w-[280px] md:min-w-0 snap-center group relative overflow-hidden rounded-[32px] bg-slate-800 h-[300px] md:h-auto border border-white/10 shadow-lg"
+            >
+              <img
+                src="./img/kegiatan/2.JPG"
+                class="w-full h-full object-cover opacity-50 group-hover:scale-110 transition duration-700 grayscale group-hover:grayscale-0"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"
+              ></div>
+              <div class="absolute bottom-6 left-6 right-6">
+                <h5 class="text-sm font-black text-white uppercase italic">
+                  Ujian Sabuk
+                </h5>
+                <p
+                  class="text-[10px] text-red-500 font-bold mt-1 uppercase tracking-tighter"
+                >
+                  21 Juni • Bantul
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="min-w-[280px] md:min-w-0 snap-center group relative overflow-hidden rounded-[32px] bg-red-700 h-[300px] md:h-auto border border-red-800 shadow-xl"
+            >
+              <img
+                src="./img/kegiatan/3.JPG"
+                class="w-full h-full object-cover opacity-40 group-hover:scale-110 transition duration-700 grayscale group-hover:grayscale-0"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-red-950/90 via-transparent to-transparent"
+              ></div>
+              <div class="absolute top-6 right-6">
+                <i class="fas fa-trophy text-white/30 text-2xl rotate-12"></i>
+              </div>
+              <div class="absolute bottom-6 left-6 right-6">
+                <h5 class="text-sm font-black text-white uppercase italic">
+                  Tournament
+                </h5>
+                <p
+                  class="text-[10px] text-red-200 font-bold mt-1 uppercase tracking-tighter"
+                >
+                  Agustus • Among Rogo
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="min-w-[280px] md:min-w-0 snap-center group relative overflow-hidden rounded-[32px] bg-slate-800 h-[300px] md:h-auto border border-white/10 shadow-lg"
+            >
+              <img
+                src="./img/kegiatan/4.JPG"
+                class="w-full h-full object-cover opacity-50 group-hover:scale-110 transition duration-700 grayscale group-hover:grayscale-0"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"
+              ></div>
+              <div class="absolute bottom-6 left-6 right-6">
+                <h5 class="text-sm font-black text-white uppercase italic">
+                  Bakti Sosial
+                </h5>
+                <p
+                  class="text-[10px] text-red-500 font-bold mt-1 uppercase tracking-tighter"
+                >
+                  Ramadhan • Pundong
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="min-w-[280px] md:min-w-0 snap-center group relative overflow-hidden rounded-[32px] bg-slate-800 h-[300px] md:h-auto border border-white/10 shadow-lg"
+            >
+              <img
+                src="./img/kegiatan/5.JPG"
+                class="w-full h-full object-cover opacity-50 group-hover:scale-110 transition duration-700 grayscale group-hover:grayscale-0"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"
+              ></div>
+              <div class="absolute bottom-6 left-6 right-6">
+                <h5 class="text-sm font-black text-white uppercase italic">
+                  Latihan Alam
+                </h5>
+                <p
+                  class="text-[10px] text-red-500 font-bold mt-1 uppercase tracking-tighter"
+                >
+                  Sept • Merapi
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="min-w-[280px] md:min-w-0 snap-center group relative overflow-hidden rounded-[32px] bg-slate-800 h-[300px] md:h-auto border border-white/10 shadow-lg"
+            >
+              <img
+                src="./img/kegiatan/6.JPG"
+                class="w-full h-full object-cover opacity-50 group-hover:scale-110 transition duration-700 grayscale group-hover:grayscale-0"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"
+              ></div>
+              <div class="absolute bottom-6 left-6 right-6">
+                <h5 class="text-sm font-black text-white uppercase italic">
+                  Mubes
+                </h5>
+                <p
+                  class="text-[10px] text-red-500 font-bold mt-1 uppercase tracking-tighter"
+                >
+                  Januari • Gedung UTDI
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <style>
+      /* Menghilangkan scrollbar tapi tetap bisa scroll di mobile */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
 
     <section id="daftar" class="py-32 bg-white px-6">
       <div class="max-w-6xl mx-auto">
